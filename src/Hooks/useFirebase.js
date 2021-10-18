@@ -3,7 +3,7 @@ import firebaseInitialized from "../Firebase/firebase.initialized"
 import {
     getAuth,onAuthStateChanged, 
     GoogleAuthProvider ,signInWithPopup,
-    createUserWithEmailAndPassword 
+    createUserWithEmailAndPassword ,updateProfile ,
 } from "firebase/auth";
 
 firebaseInitialized()
@@ -30,18 +30,28 @@ const googleLogIn =()=>{
 }
 
 
-// login with email and pass
+// Create User with email and pass
 const createNewUser =()=>{
     createUserWithEmailAndPassword(auth, inputData.email, inputData.password)
   .then((result) => {
-    setInputData({})
+    updateProfileName()
   })
   .catch((error) => {
     setError(error.message) ;
    
   });
 
+}
 
+// update Profile name
+const updateProfileName =()=>{
+  updateProfile(auth.currentUser, {
+    displayName: inputData?.name
+  }).then(() => {
+    
+  }).catch((error) => {
+    setError(error.message) ;
+  });
 }
 
 console.log(user);
