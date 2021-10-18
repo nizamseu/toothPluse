@@ -1,0 +1,29 @@
+.footer {
+    background-color: #F6F9F9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.usefulLink{
+    margin-top: 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.usefulLink a{
+text-decoration: none;
+line-height: 30px;
+color: hsla(240, 1%, 22%, 0.959);
+}
+
+.services{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start; 
+    
+}

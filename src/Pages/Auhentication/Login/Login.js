@@ -1,9 +1,16 @@
+import Button from '@restart/ui/esm/Button';
 import React from 'react';
+import useFirebase from '../../../Hooks/useFirebase';
 
 const Login = () => {
+    const {googleLogIn}=useFirebase();
+   
+
     return (
         <div>
-            <h1>Login</h1>
+       
+         
+            <Button onClick={googleLogIn}>Login</Button>
         </div>
     );
 };

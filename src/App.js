@@ -12,6 +12,7 @@ import NotFound from './Pages/404/NotFound'
 import Login from './Pages/Auhentication/Login/Login';
 import Resgistration from './Pages/Auhentication/Resgistration/Resgistration';
 import Header from './Pages/Home/Header/Header';
+import Footer from './Pages/Home/Footer/Footer';
 
 function App() {
   return (
@@ -24,19 +25,19 @@ function App() {
             <Home></Home>
           </Route>
 
-          <Route  path ='/home' >
+          <Route exact path ='/home' >
             <Home></Home>
           </Route>
 
-          <Route  path ='/services' >
+          <Route exact path ='/services' >
             <Services></Services>
           </Route>
 
-          <Route  path ='/login' >
+          <Route exact path ='/login' >
             <Login></Login>
           </Route>
 
-          <Route  path ='/reg' >
+          <Route exact path ='/reg' >
            <Resgistration></Resgistration>
           </Route>
 
@@ -46,6 +47,7 @@ function App() {
           </Route>
 
       </Switch>
+      <Footer></Footer>
     </Router>
 
     </div>
