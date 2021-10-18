@@ -4,15 +4,17 @@ import {
     getAuth,onAuthStateChanged, 
     GoogleAuthProvider ,signInWithPopup,
     createUserWithEmailAndPassword ,updateProfile ,
+    signInWithEmailAndPassword ,signOut,
 } from "firebase/auth";
 
 firebaseInitialized()
 const useFirebase =()=>{
     const [user,setUser]=useState({})
     const [inputData,setInputData]=useState({})
+    const [loginData,setLoginData]=useState({})
     const [error,setError]=useState({})
 
-console.log("from",inputData);
+
 
     const auth = getAuth();
 // providers
@@ -54,6 +56,30 @@ const updateProfileName =()=>{
   });
 }
 
+
+//login withemail and password
+const loginWithemailandPass=()=>{
+  signInWithEmailAndPassword(auth, loginData?.email, loginData?.password)
+  .then((result) => {
+    
+  })
+  .catch((error) => {
+    setError(error.message);
+  });
+}
+
+
+//logOut 
+const handleSignOut = () => {
+  signOut(auth)
+    .then(() => {
+      setUser({});
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+};
+console.log("from",loginData);
 console.log(user);
 
 
@@ -81,6 +107,10 @@ useEffect(() => {
         setInputData,
         createNewUser,
         inputData,
+        loginData,
+        setLoginData,
+        loginWithemailandPass,
+        handleSignOut
         
     }
 }

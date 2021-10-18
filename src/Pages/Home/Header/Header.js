@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import useFirebase from '../../../Hooks/useFirebase';
 import './header.css'
 const Header = () => {
-  const {user}=useFirebase()
+  const {handleSignOut,user}=useFirebase()
     return (
         <Navbar style={{justifyContent:'flex-start'}} sticky="top" bg="dark" variant="dark" expand="lg">
   <Container fluid>
@@ -19,6 +19,7 @@ const Header = () => {
         <Link to="/services">Services</Link>
         <Link to="/login">Login</Link>
         <Link to="/reg">Registration</Link>
+        <Button onClick={handleSignOut}>LogOut</Button>
         
       </Nav>
     </Navbar.Collapse>
