@@ -43,7 +43,7 @@ const CardDetails = () => {
                <p>{data.des}</p>
                <h1 className='text-info'>{data.fees}</h1>
 
-               <h3>Available : {data.open}</h3>
+               <h3>Available : Monday-Friday</h3>
            </Box>
         </Box>
     );

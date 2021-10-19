@@ -3,7 +3,9 @@ import { Box } from '@mui/system';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../../Hooks/useFirebase';
+import { useHistory } from 'react-router';
 const Resgistration = () => {
+    const history= useHistory()
     const {setInputData,createNewUser,inputData}=useFirebase();
     
 
@@ -17,6 +19,7 @@ const Resgistration = () => {
         createNewUser()
         e.preventDefault();
         e.target.reset()
+        history.push('/home')
     }
   
     return (

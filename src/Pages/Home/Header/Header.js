@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <Navbar style={{justifyContent:'flex-start'}} sticky="top" bg="dark" variant="dark" expand="lg">
   <Container fluid>
-    <Navbar.Brand  href="#home">Medi <span style={{ color:'red',fontWeight:'900'}}>Pluse</span></Navbar.Brand>
+    <Navbar.Brand  href="#home">TooTH<span style={{ color:'red',fontWeight:'900'}}>Pluse</span></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav style={{flexGrow:1}} className="me-auto  header-link">

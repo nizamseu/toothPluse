@@ -24,7 +24,7 @@ const Footer = () => {
            style={{display:'flex',margin:'10px'}}
             >
               <img width='50px' src={logo} alt="" />
-              <Typography mx='10px' variant='h5'>Medi <span style={{ color:'red',fontWeight:'900'}}>Pluse</span></Typography>
+              <Typography mx='10px' variant='h5'>TooTH<span style={{ color:'red',fontWeight:'900'}}>Pluse</span></Typography>
 
             </Box>
             <Typography style={{textAlign:'justify'}}>
@@ -45,9 +45,9 @@ const Footer = () => {
             </Typography>
             <Box sx={{my:'20px',fontSize:'16px'}}>
                 <Link to='/home'>Home</Link> <br />
-                <Link to='/about'>About</Link><br />
+                <Link to='/'>About</Link><br />
                 <Link to='/services'>Services</Link><br />
-                <Link to='/about'>Health Info</Link><br />
+                <Link to='/appointment'>Health Info</Link><br />
                 <Link to='/'>Appointment</Link><br />
             </Box>
           </Box>

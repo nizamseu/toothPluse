@@ -32,6 +32,7 @@ const handleEmailPass =()=>{
     loginWithemailandPass()
     .then((result) => { 
         history.push(url)
+       window.location.reload();
     })
     .catch((error) => {
       setError(error.message);
