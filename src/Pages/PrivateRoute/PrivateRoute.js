@@ -13,7 +13,7 @@ if(isLoading){
     return ( <Route
       {...rest}
       render={({ location }) =>
-       user.email  ? (
+      (user.displayName|| user.email)  ? (
           children
         ) : (
           <Redirect

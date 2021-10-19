@@ -4,7 +4,8 @@ import {
     getAuth,onAuthStateChanged, 
     GoogleAuthProvider ,signInWithPopup,
     createUserWithEmailAndPassword ,updateProfile ,
-    signInWithEmailAndPassword ,signOut,
+    signInWithEmailAndPassword ,signOut,GithubAuthProvider,
+    TwitterAuthProvider,
 } from "firebase/auth";
 
 firebaseInitialized()
@@ -20,18 +21,15 @@ const useFirebase =()=>{
     const auth = getAuth();
 // providers
 const GoogleProvider = new GoogleAuthProvider();
+const GitHubProvider = new GithubAuthProvider();
+const twitterProvider = new TwitterAuthProvider();
 
     // login with Google
 
 const googleLogIn =()=>{
   setIsLoading(true)
-    signInWithPopup(auth, GoogleProvider)
-    .then((result) => {
-       
-    }).catch((error) => {
-      setError(error.message)
-    })
-    .finally(()=> setIsLoading(false));
+   return signInWithPopup(auth, GoogleProvider)
+   
 }
 
 
@@ -63,15 +61,16 @@ const updateProfileName =()=>{
 //login withemail and password
 const loginWithemailandPass=()=>{
   setIsLoading(true)
-  signInWithEmailAndPassword(auth, loginData?.email, loginData?.password)
-  .then((result) => {
-    
-  })
-  .catch((error) => {
-    setError(error.message);
-  }).finally(()=> setIsLoading(false));
+  return signInWithEmailAndPassword(auth, loginData?.email, loginData?.password)
+  
 }
 
+
+// login with GitHub 
+const handleGithubSignIn = () => {
+  return signInWithPopup(auth, GitHubProvider)
+  
+};
 
 //logOut 
 const handleSignOut = () => {
@@ -120,8 +119,10 @@ useEffect(() => {
         setLoginData,
         loginWithemailandPass,
         handleSignOut,
-        isLoading
-        
+        isLoading,
+        setIsLoading,
+        setError,
+        handleGithubSignIn,
     }
 }
 
