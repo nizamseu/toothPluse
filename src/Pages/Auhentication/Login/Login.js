@@ -4,7 +4,7 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../../Hooks/useFirebase';
-
+import './login.css'
 const Login = () => {
    const history =useHistory()
   const location = useLocation();
@@ -56,12 +56,15 @@ const handleGitLogin=()=>{
            alignItems:'center',
           
 
-           }}>
+           }}
+         >
             <Box sx={{
                 width:'350px',
                 padding:'20px',
                borderRadius:'10px',
                 boxShadow: '10px 10px 25px gray',
+                
+                
             }}>
             <Box sx={{my:'10px'}}><h3>Login to account</h3>
             <Typography>Access to the most powerfull tool in the entire design and web industry.</Typography>

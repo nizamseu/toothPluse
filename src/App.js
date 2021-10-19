@@ -15,6 +15,8 @@ import Header from './Pages/Home/Header/Header';
 import Footer from './Pages/Home/Footer/Footer';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import UserContext from './UserContext/UserContext';
+import { Details } from '@mui/icons-material';
+import CardDetails from './Pages/CardDetails/CardDetails';
 
 function App() {
   return (
@@ -37,6 +39,10 @@ function App() {
 
           <Route exact path ='/login' >
             <Login></Login>
+          </Route>
+
+          <Route  path ='/details/:id' >
+          <CardDetails></CardDetails>
           </Route>
 
           <Route exact path ='/reg' >

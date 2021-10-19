@@ -1,0 +1,15 @@
+.login{
+    background-color: green;
+    background-image:url('../../../Images/bg.jpg') ;
+   background-position: center;
+   background-repeat: no-repeat;
+  
+}
+.login::before{
+    background-color: rgba(0, 0, 0, 0.746);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
