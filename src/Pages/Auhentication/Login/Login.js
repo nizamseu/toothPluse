@@ -8,10 +8,18 @@ import './login.css'
 const Login = () => {
    const history =useHistory()
   const location = useLocation();
-    const {handleGithubSignIn,setError,setIsLoading,user,loginWithemailandPass,loginData,setLoginData,googleLogIn}=useFirebase();
+    const {isLoading,handleGithubSignIn,setError,setIsLoading,user,loginWithemailandPass,loginData,setLoginData,googleLogIn}=useFirebase();
     
-    const {from } = location.state || { from: { pathname: "/home" } };
+    const {from } = location.state || { from: { pathname: "/" } };
     const url =from.pathname;
+
+
+    if(isLoading){
+        return <div>
+          <h1>Loading....</h1>
+        </div>
+      }
+
 
     const HandleOnBlur =(e)=>{
         setLoginData({...loginData,[e.target.name]:e.target.value})
