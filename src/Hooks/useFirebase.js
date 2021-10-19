@@ -83,10 +83,6 @@ const handleSignOut = () => {
       console.log(error.message);
     }).finally(()=> setIsLoading(false));
 };
-console.log("from",loginData);
-console.log(user);
-
-
 
 
 // onAuthStateChanged
