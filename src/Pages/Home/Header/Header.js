@@ -9,7 +9,6 @@ import './header.css'
 import useAuth from '../../../Hooks/useAuth';
 const Header = () => {
   const {handleSignOut,user}=useAuth();
-  console.log(user);
     return (
         <Navbar style={{justifyContent:'flex-start'}} sticky="top" bg="dark" variant="dark" expand="lg">
   <Container fluid>
@@ -20,9 +19,14 @@ const Header = () => {
        <Typography sx={{ letterSpacing: 4, fontWeight:'900' }} mx='10px' color='white'>{user?.displayName}</Typography>
         <HashLink to="/home">Home</HashLink>
         <HashLink to="/services">Services</HashLink>
-        <HashLink to="/login">Login</HashLink>
-        <HashLink to="/reg">Registration</HashLink>
-        <Button onClick={handleSignOut}>LogOut</Button>
+        <HashLink to="/doctors">Doctors</HashLink>
+        <HashLink to="/appointment">Appointment</HashLink>
+        
+        {
+          (user.displayName) ?
+          <Button onClick={handleSignOut}>LogOut</Button> :<HashLink to="/login">Login</HashLink>
+       }
+        
         
       </Nav>
     </Navbar.Collapse>

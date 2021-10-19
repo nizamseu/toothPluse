@@ -17,6 +17,8 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import UserContext from './UserContext/UserContext';
 import { Details } from '@mui/icons-material';
 import CardDetails from './Pages/CardDetails/CardDetails';
+import Doctors from './Pages/Home/Doctors/Doctors';
+import Appointment from './Pages/Appointment/Appointment';
 
 function App() {
   return (
@@ -33,20 +35,29 @@ function App() {
             <Home></Home>
           </Route>
 
-          <PrivateRoute  path ='/services' >
+          <Route  path ='/services' >
             <Services></Services>
-          </PrivateRoute>
+          </Route>
 
           <Route exact path ='/login' >
             <Login></Login>
           </Route>
 
-          <Route  path ='/details/:id' >
-          <CardDetails></CardDetails>
-          </Route>
+          <PrivateRoute  path ='/details/:id' >
+            <CardDetails></CardDetails>
+          </PrivateRoute>
+
 
           <Route exact path ='/reg' >
            <Resgistration></Resgistration>
+          </Route>
+
+          <Route exact path ='/doctors' >
+           <Doctors></Doctors>
+          </Route>
+
+          <Route exact path='/appointment'>
+            <Appointment></Appointment>
           </Route>
 
           

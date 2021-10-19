@@ -15,19 +15,25 @@ const Services = () => {
         })
     },[])
     return (
-        <Box sx={{
-             display: 'grid',
-              gridTemplateColumns:{xl:'repeat(4, 1fr)',lg:'repeat(3, 1fr)',md:'repeat(2, 1fr)',sm:'repeat(1, 1fr)',sx:'repeat(1, 1fr)'} ,
-              justifyContent:'center' ,
-              alignItems:'center',
-              mx:'auto'
-              }}>
-        
-           
-            {
-                data&& data.map(dentis=><DentisCard key={dentis.id} item={dentis}></DentisCard>)
-            }
-        </Box>
+        <Box>
+        <hr />
+            <h1 className='text-center my-3'>Our Services</h1>
+                <hr />
+       
+            <Box sx={{
+                display: 'grid',
+                gridTemplateColumns:{xl:'repeat(4, 1fr)',lg:'repeat(3, 1fr)',md:'repeat(2, 1fr)',sm:'repeat(1, 1fr)',sx:'repeat(1, 1fr)'} ,
+                justifyContent:'center' ,
+                alignItems:'center',
+                mx:'auto'
+                }}>
+            
+            
+                {
+                    data&& data.map(dentis=><DentisCard key={dentis.id} item={dentis}></DentisCard>)
+                }
+            </Box>
+    </Box>
     );
 };
 
