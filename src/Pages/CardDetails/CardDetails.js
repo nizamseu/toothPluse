@@ -35,7 +35,7 @@ const CardDetails = () => {
            
         }}>
           
-           <Box sx={{width:'50%',mx:'auto', display:'flex' ,justifyContent:'center', alignItems:'center'}}>
+           <Box sx={{width:'50%',mx:'auto',my:'20px', display:'flex' ,justifyContent:'center', alignItems:'center'}}>
                <img  width='250px' src={data.picture} alt="" />
            </Box>
            <Box sx={{textAlign:'justify'}}>

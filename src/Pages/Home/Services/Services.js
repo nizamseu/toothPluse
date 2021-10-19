@@ -17,7 +17,7 @@ const Services = () => {
     return (
         <Box sx={{
              display: 'grid',
-              gridTemplateColumns:{xl:'repeat(4, 1fr)',lg:'repeat(3, 1fr)',md:'repeat(3, 1fr)',sm:'repeat(1, 1fr)',sx:'repeat(1, 1fr)'} ,
+              gridTemplateColumns:{xl:'repeat(4, 1fr)',lg:'repeat(3, 1fr)',md:'repeat(2, 1fr)',sm:'repeat(1, 1fr)',sx:'repeat(1, 1fr)'} ,
               justifyContent:'center' ,
               alignItems:'center',
               mx:'auto'
