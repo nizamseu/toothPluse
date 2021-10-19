@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 import useFirebase from '../../../Hooks/useFirebase';
 import { HashLink } from 'react-router-hash-link';
 import './header.css'
+import useAuth from '../../../Hooks/useAuth';
 const Header = () => {
-  const {handleSignOut,user}=useFirebase()
+  const {handleSignOut,user}=useAuth()
     return (
         <Navbar style={{justifyContent:'flex-start'}} sticky="top" bg="dark" variant="dark" expand="lg">
   <Container fluid>

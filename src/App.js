@@ -14,10 +14,11 @@ import Resgistration from './Pages/Auhentication/Resgistration/Resgistration';
 import Header from './Pages/Home/Header/Header';
 import Footer from './Pages/Home/Footer/Footer';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import UserContext from './UserContext/UserContext';
 
 function App() {
   return (
-    <div >
+    <UserContext>
     <Router>
     <Header></Header>
       <Switch>
@@ -51,7 +52,7 @@ function App() {
       <Footer></Footer>
     </Router>
 
-    </div>
+    </UserContext>
   );
 }
 

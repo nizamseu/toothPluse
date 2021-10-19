@@ -1,9 +1,10 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router';
+import useAuth from '../../Hooks/useAuth';
 import useFirebase from '../../Hooks/useFirebase';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const {user,isLoading}=useFirebase();
+    const {user,isLoading}=useAuth();
 if(isLoading){
   return <div>
     <h1>Loading....</h1>
