@@ -13,6 +13,7 @@ import Login from './Pages/Auhentication/Login/Login';
 import Resgistration from './Pages/Auhentication/Resgistration/Resgistration';
 import Header from './Pages/Home/Header/Header';
 import Footer from './Pages/Home/Footer/Footer';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -29,9 +30,9 @@ function App() {
             <Home></Home>
           </Route>
 
-          <Route exact path ='/services' >
+          <PrivateRoute  path ='/services' >
             <Services></Services>
-          </Route>
+          </PrivateRoute>
 
           <Route exact path ='/login' >
             <Login></Login>

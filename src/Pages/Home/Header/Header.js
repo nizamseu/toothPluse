@@ -4,6 +4,7 @@ import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../../Hooks/useFirebase';
+import { HashLink } from 'react-router-hash-link';
 import './header.css'
 const Header = () => {
   const {handleSignOut,user}=useFirebase()
@@ -15,10 +16,10 @@ const Header = () => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav style={{flexGrow:1}} className="me-auto  header-link">
        <Typography sx={{ letterSpacing: 4, fontWeight:'900' }} mx='10px' color='white'>{user?.displayName}</Typography>
-        <Link to="/home">Home</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/reg">Registration</Link>
+        <HashLink to="/home">Home</HashLink>
+        <HashLink to="/services">Services</HashLink>
+        <HashLink to="/login">Login</HashLink>
+        <HashLink to="/reg">Registration</HashLink>
         <Button onClick={handleSignOut}>LogOut</Button>
         
       </Nav>

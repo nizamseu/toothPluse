@@ -3,8 +3,8 @@ import React from 'react';
 import useFirebase from '../../../Hooks/useFirebase';
 
 const Login = () => {
-    const {loginWithemailandPass,loginData,setLoginData,googleLogIn}=useFirebase();
-    
+    const {user,loginWithemailandPass,loginData,setLoginData,googleLogIn}=useFirebase();
+    console.log(user.displayName);
     const HandleOnBlur =(e)=>{
         setLoginData({...loginData,[e.target.name]:e.target.value})
     }
