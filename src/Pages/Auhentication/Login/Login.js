@@ -81,7 +81,7 @@ const handleGitLogin=()=>{
                 <Button  sx={{mx:'10px'}} onClick={handleGoogleLogin}>Google</Button>
                 <Button  sx={{mx:'10px'}} onClick={handleGitLogin}>GitHub</Button>
            </Box>
-            <Link style={{fontSize:'20px', textDecoration:'none',color:'black',my:'20px'}} to={'/reg'}>Register new account</Link>
+            <Link style={{fontSize:'20px', textDecoration:'none',color:'red',my:'20px'}} to={'/reg'}>Register new account</Link>
         </Box>
        </Box>
     );

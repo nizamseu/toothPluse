@@ -8,7 +8,8 @@ import { HashLink } from 'react-router-hash-link';
 import './header.css'
 import useAuth from '../../../Hooks/useAuth';
 const Header = () => {
-  const {handleSignOut,user}=useAuth()
+  const {handleSignOut,user}=useAuth();
+  console.log(user);
     return (
         <Navbar style={{justifyContent:'flex-start'}} sticky="top" bg="dark" variant="dark" expand="lg">
   <Container fluid>
