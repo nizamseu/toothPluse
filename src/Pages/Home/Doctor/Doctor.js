@@ -19,7 +19,7 @@ const Doctor = (props) => {
                     <img marin='0 auto' height='200px' width='200px' src={url} alt="" />
                 </Box>
                 <Box sx={{
-                    backgroundColor:'#1976D2',
+                    
                     mx:0,
                     width:'100%',
                     padding:'10px',

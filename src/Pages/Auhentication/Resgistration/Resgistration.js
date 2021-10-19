@@ -19,7 +19,7 @@ const Resgistration = () => {
         createNewUser()
         e.preventDefault();
         e.target.reset()
-        history.push('/home')
+        history.push('/login')
     }
   
     return (
