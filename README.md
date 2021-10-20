@@ -1,4 +1,4 @@
-#  Tooth Pluse    *Care For Your Smile
+#  Tooth Pluse    
 
 ### Live Site Link [Tooth Pluse](https://fir-auth-cb3a4.web.app/)
 
