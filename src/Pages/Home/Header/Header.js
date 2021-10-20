@@ -1,9 +1,7 @@
 import { Button, Typography } from '@mui/material';
-import { Box } from '@mui/system';
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../../Hooks/useFirebase';
 import { HashLink } from 'react-router-hash-link';
 import './header.css'
 import useAuth from '../../../Hooks/useAuth';
@@ -17,10 +15,14 @@ const Header = () => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav style={{flexGrow:1}} className="me-auto  header-link">
        <Typography sx={{ letterSpacing: 4, fontWeight:'900' }} mx='10px' color='white'>{user?.displayName}</Typography>
-        <HashLink to="/home">Home</HashLink>
-        <HashLink to="/services">Services</HashLink>
-        <HashLink to="/doctors">Doctors</HashLink>
-        <HashLink to="/appointment">Appointment</HashLink>
+       
+       <Typography>
+        <Link to="/home">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/doctors">Doctors</Link>
+          <Link to="/appointment">Appointment</Link>
+       </Typography>
+        
         
         {
           (user.displayName) ?
