@@ -1,9 +1,11 @@
+import { Button } from '@mui/material';
 import { Box, display } from '@mui/system';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 
 const CardDetails = () => {
     const {id}=useParams();
+    const history =useHistory()
     const [data,setData]=useState([])
 
     useEffect(()=>{
@@ -44,6 +46,7 @@ const CardDetails = () => {
                <h1 className='text-info'>{data.fees}</h1>
 
                <h3>Available : Monday-Friday</h3>
+               <Button onClick={()=>history.push('/appointment')} variant='contained'>Appointment</Button>
            </Box>
         </Box>
     );
