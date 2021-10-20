@@ -19,6 +19,7 @@ import { Details } from '@mui/icons-material';
 import CardDetails from './Pages/CardDetails/CardDetails';
 import Doctors from './Pages/Home/Doctors/Doctors';
 import Appointment from './Pages/Appointment/Appointment';
+import About from './Pages/About/About';
 
 function App() {
   return (
@@ -58,6 +59,10 @@ function App() {
 
           <Route exact path='/appointment'>
             <Appointment></Appointment>
+          </Route>
+
+          <Route exact path='/about'>
+            <About></About>
           </Route>
 
           

@@ -15,12 +15,13 @@ const Header = () => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav style={{flexGrow:1}} className="me-auto  header-link">
        <Typography sx={{ letterSpacing: 4, fontWeight:'900' }} mx='10px' color='white'>{user?.displayName}</Typography>
-       
+
        <Typography>
         <Link to="/home">Home</Link>
           <Link to="/services">Services</Link>
           <Link to="/doctors">Doctors</Link>
           <Link to="/appointment">Appointment</Link>
+          <Link to="/about">About Us</Link>
        </Typography>
         
         

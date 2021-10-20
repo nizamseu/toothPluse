@@ -28,9 +28,9 @@ const Footer = () => {
 
             </Box>
             <Typography style={{textAlign:'justify'}}>
-              Lorem ipsum dolor sit amet consectetur adipisicing 
-              elit. Optio iure aliquid quae eius consequatur distinctio similique nobis corporis, mollitia ipsa dolores vero sunt labore itaque nemo at quaerat molestiae, velit inventore. Numquam ullam, odit eligendi tempora reiciendis in commodi totam fugit! Eligendi distinctio saepe 
-              neque tenetur sapiente asperiores dolorum dicta.
+            Welcome to the ToothPluse. We are proud to deliver excellent care to our patients as well as to provide the clinical setting to educate our students.
+
+          Treatment is provided by students enrolled in two undergraduate programs (Dentistry and Dental Hygiene) and five graduate programs (dentists studying to become specialists). Also, our faculty members provide care in the same way as in regular private practice.
             </Typography>
             <Typography style={{marginTop:'20px',fontSize:'25px',fontWeight:'lighter'}}>
               Trusted by <span style={{fontWeight:'bold'}}>15,000</span> People
