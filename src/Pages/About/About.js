@@ -5,7 +5,7 @@ import React from 'react';
 const About = () => {
     return (
     <Box>   
-     <h1 className='my-3 text-info text-center'>About Us</h1>
+     <h1 style={{fontWeight:'900'}} className='my-3 text-center '>About Us</h1>
         <Box sx={{
             display:'grid',
             gridTemplateColumns:{
@@ -15,7 +15,7 @@ const About = () => {
                 sx:'repeat(1,1fr)',
                 },
             justifyContent:'center',
-            alignItems:'center',
+            
             my:3,
             mx:'auto',
         }}>
@@ -24,11 +24,10 @@ const About = () => {
                 <img width="100%" src="http://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/people-03.jpg" alt="" />
             </Box>
             <Box className='text-center p-3'>
-            <Typography className="text-center" mx='10px'   variant='h5'>TooTH<span style={{ color:'red',fontWeight:'900'}}>Pluse</span>
-            </Typography>
+            <Typography mx='10px' variant='h5' fontWeight='900'>TooTH<span className='text-danger'>Pluse</span></Typography>
 
             <Typography sx={{my:3}}>
-             <h4 className='text-danger'>You are always safe with us.</h4>
+             <h4 className='text-info'>You are always safe with us.</h4>
             <h1 style={{margin:"35px 5px" ,fontSize:"20",fontWeight:'900'}}>We are ready to <br /> <span className='text-danger'>HELP</span> any time.</h1>
             </Typography>
 

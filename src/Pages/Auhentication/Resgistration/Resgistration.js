@@ -4,6 +4,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../../Hooks/useFirebase';
 import { useHistory } from 'react-router';
+import Swal from 'sweetalert2'
+
 const Resgistration = () => {
     const history= useHistory()
     const {setInputData,createNewUser,inputData}=useFirebase();
@@ -17,6 +19,15 @@ const Resgistration = () => {
     const handleRegistration=(e)=>{
         
         createNewUser()
+
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Account Created Successfully',
+            showConfirmButton: false,
+            timer: 1500
+          });
+
         e.preventDefault();
         e.target.reset()
         history.push('/login')

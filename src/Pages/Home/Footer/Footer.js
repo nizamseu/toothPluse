@@ -24,7 +24,7 @@ const Footer = () => {
            style={{display:'flex',margin:'10px'}}
             >
               <img width='50px' src={logo} alt="" />
-              <Typography mx='10px' variant='h5'>TooTH<span style={{ color:'red',fontWeight:'900'}}>Pluse</span></Typography>
+              <Typography mx='10px' variant='h5' fontWeight='900'>TooTH<span className='text-danger'>Pluse</span></Typography>
 
             </Box>
             <Typography style={{textAlign:'justify'}}>
