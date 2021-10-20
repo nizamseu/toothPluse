@@ -1,6 +1,4 @@
-#  Tooth Pluse
-###### Care For Your Smile
-## Lets Us Brighten Your Smile
+#  Tooth Pluse    *Care For Your Smile
 
 ### Live Site Link [Tooth Pluse](https://fir-auth-cb3a4.web.app/)
 
